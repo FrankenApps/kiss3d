@@ -249,6 +249,10 @@ impl AbstractCanvas for GLCanvas {
         self.window.window().set_visible(true)
     }
 
+    fn set_decorations(&mut self, decorations: bool) {
+        self.window.window().set_decorations(decorations);
+    }
+
     fn get_mouse_button(&self, button: MouseButton) -> Action {
         self.button_states[button as usize]
     }

@@ -135,6 +135,11 @@ impl Canvas {
         self.canvas.show()
     }
 
+    /// Set window decorations (e.g. if the window has a frame)
+    pub fn set_decorations(&mut self, decorations: bool) {
+        self.canvas.set_decorations(decorations);
+    }
+
     /// The state of a mouse button.
     pub fn get_mouse_button(&self, button: MouseButton) -> Action {
         self.canvas.get_mouse_button(button)
@@ -169,6 +174,7 @@ pub(crate) trait AbstractCanvas {
     fn hide_cursor(&self, hide: bool);
     fn hide(&mut self);
     fn show(&mut self);
+    fn set_decorations(&mut self, decorations: bool);
 
     fn get_mouse_button(&self, button: MouseButton) -> Action;
     fn get_key(&self, key: Key) -> Action;

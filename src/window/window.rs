@@ -179,6 +179,12 @@ impl Window {
         self.canvas.show()
     }
 
+    /// Set window decorations (e.g. frame) visibility
+    #[inline]
+    pub fn set_decorations(&mut self, decorations: bool) {
+        self.canvas.set_decorations(decorations);
+    }
+
     /// Sets the background color.
     #[inline]
     pub fn set_background_color(&mut self, r: f32, g: f32, b: f32) {
