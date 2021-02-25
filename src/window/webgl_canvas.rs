@@ -503,6 +503,10 @@ impl AbstractCanvas for WebGLCanvas {
         // Not supported.
     }
 
+    fn set_decorations(&mut self, decorations: bool) {
+        // Not supported.
+    }
+
     fn get_mouse_button(&self, button: MouseButton) -> Action {
         self.data.borrow().button_states[button as usize]
     }
